@@ -1,15 +1,15 @@
-# 🧠 FlixChurn — Single Source of Truth (SSOT) & Project Memory
+# 🏗️ FlixChurn — Technical Specification & Architecture Manual
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                               FLIXCHURN SYSTEM MEMORY & RUNTIME STATE                            │
+│                               FLIXCHURN SYSTEM SPECIFICATION & RUNTIME STATE                     │
 │  Domain: Streaming (SVOD)   │  Architecture: ML Batch + Online  │  Status: Production-Ready    │
-│  Last Refreshed: 2026-10-07 │  Test Coverage: 38/38 Passing     │  Static Analysis: 0 Diagnostics│
+│  Version: 1.2.0             │  Test Coverage: 38/38 Passing     │  Static Analysis: 0 Diagnostics│
 └──────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-> [!IMPORTANT]
-> **Single Source of Truth (SSOT)**: This consolidated memory document contains the complete technical architecture, development milestones, feature contracts, machine learning benchmarks, financial risk formulations, API registry, and operational guides for **FlixChurn**. It is engineered to provide agents and developers with a complete, token-efficient understanding of the repository without recursive directory scans.
+> [!NOTE]
+> **Technical Reference**: This document provides the authoritative engineering specification, feature contracts, machine learning benchmarks, financial risk formulations, API registry, and operational runbooks for the **FlixChurn** platform.
 
 ---
 
