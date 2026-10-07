@@ -1,0 +1,46 @@
+# Application configuration
+
+app:
+  name: "FlixChurn"
+  version: "1.0.0"
+  description: "AI Customer Churn Prediction & Retention Intelligence Platform"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  prefix: "/api/v1"
+  debug: true
+  cors_origins:
+    - "http://localhost:5173"
+    - "http://localhost:3000"
+
+database:
+  host: "localhost"
+  port: 5432
+  name: "flixchurn"
+  user: "flixchurn"
+  # Password should come from environment variable
+  pool_size: 10
+  max_overflow: 20
+
+logging:
+  level: "INFO"
+  format: "json"
+  # Do not log customer PII
+  redact_fields:
+    - "customer_email"
+    - "customer_name"
+
+data:
+  raw_dir: "data/raw"
+  interim_dir: "data/interim"
+  processed_dir: "data/processed"
+  sample_dir: "data/sample"
+
+monitoring:
+  # PSI threshold for feature drift detection
+  drift_threshold_psi: 0.2
+  # KS statistic threshold
+  drift_threshold_ks: 0.1
+  # Minimum samples for drift calculation
+  min_samples_drift: 100

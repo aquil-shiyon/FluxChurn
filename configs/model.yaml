@@ -1,0 +1,77 @@
+# Model training configuration
+
+random_seed: 42
+
+# Temporal split configuration
+# Since the dataset is a flat snapshot without timestamps,
+# we use stratified splitting with synthetic temporal ordering.
+# This decision is documented as a known limitation.
+split:
+  train_ratio: 0.6
+  validation_ratio: 0.2
+  test_ratio: 0.2
+
+# Model benchmark configurations
+models:
+  logistic_regression:
+    name: "Logistic Regression"
+    type: "logistic_regression"
+    params:
+      C: 1.0
+      max_iter: 1000
+      solver: "lbfgs"
+      class_weight: "balanced"
+      random_state: 42
+
+  random_forest:
+    name: "Random Forest"
+    type: "random_forest"
+    params:
+      n_estimators: 200
+      max_depth: 10
+      min_samples_split: 10
+      min_samples_leaf: 5
+      class_weight: "balanced"
+      random_state: 42
+      n_jobs: -1
+
+  xgboost:
+    name: "XGBoost"
+    type: "xgboost"
+    params:
+      n_estimators: 200
+      max_depth: 6
+      learning_rate: 0.1
+      min_child_weight: 5
+      subsample: 0.8
+      colsample_bytree: 0.8
+      scale_pos_weight: 1.0  # Dataset is ~50/50, no scaling needed
+      eval_metric: "logloss"
+      random_state: 42
+      use_label_encoder: false
+
+# Calibration
+calibration:
+  # Whether to evaluate and potentially apply calibration
+  evaluate: true
+  # Method: "platt" (sigmoid) or "isotonic"
+  method: "isotonic"
+  # Only apply if it improves Brier score on validation set
+  apply_only_if_improved: true
+
+# Model selection criteria (ordered by priority)
+selection_criteria:
+  primary: "pr_auc"
+  secondary:
+    - "recall_at_10"
+    - "brier_score"
+    - "calibration_slope"
+  # Minimum thresholds for production readiness
+  minimum_thresholds:
+    pr_auc: 0.4
+    roc_auc: 0.6
+
+# MLflow
+mlflow:
+  experiment_name: "flixchurn-churn-prediction"
+  tracking_uri: "http://localhost:5000"

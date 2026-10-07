@@ -1,0 +1,163 @@
+{
+  "age": {
+    "mean": 43.8474,
+    "std": 15.501128031019123,
+    "min": 18.0,
+    "max": 70.0,
+    "median": 44.0,
+    "q25": 30.0,
+    "q75": 58.0,
+    "missing_pct": 0.0
+  },
+  "watch_hours": {
+    "mean": 11.64945,
+    "std": 12.014653647024186,
+    "min": 0.01,
+    "max": 110.4,
+    "median": 8.0,
+    "q25": 3.3375,
+    "q75": 16.03,
+    "missing_pct": 0.0
+  },
+  "last_login_days": {
+    "mean": 30.0898,
+    "std": 17.53607820374195,
+    "min": 0.0,
+    "max": 60.0,
+    "median": 30.0,
+    "q25": 15.0,
+    "q75": 45.0,
+    "missing_pct": 0.0
+  },
+  "monthly_fee": {
+    "mean": 13.683399999999997,
+    "std": 3.6920621208940814,
+    "min": 8.99,
+    "max": 17.99,
+    "median": 13.99,
+    "q25": 8.99,
+    "q75": 17.99,
+    "missing_pct": 0.0
+  },
+  "number_of_profiles": {
+    "mean": 3.0244,
+    "std": 1.4158409377865235,
+    "min": 1.0,
+    "max": 5.0,
+    "median": 3.0,
+    "q25": 2.0,
+    "q75": 4.0,
+    "missing_pct": 0.0
+  },
+  "avg_watch_time_per_day": {
+    "mean": 0.8748,
+    "std": 2.619824325388857,
+    "min": 0.0,
+    "max": 98.42,
+    "median": 0.29,
+    "q25": 0.11,
+    "q75": 0.72,
+    "missing_pct": 0.0
+  },
+  "watch_hours_per_profile": {
+    "mean": 5.218194033333333,
+    "std": 6.907817382618804,
+    "min": 0.002,
+    "max": 81.07,
+    "median": 2.96,
+    "q25": 1.1265,
+    "q75": 6.583,
+    "missing_pct": 0.0
+  },
+  "fee_per_watch_hour": {
+    "mean": 2.497802704768686,
+    "std": 2.7036612787570427,
+    "min": 0.08070017953321364,
+    "max": 17.81188118811881,
+    "median": 1.4572916666666667,
+    "q25": 0.7596597641004196,
+    "q75": 3.1728395061728394,
+    "missing_pct": 0.0
+  },
+  "login_recency_score": {
+    "mean": 0.5014966666666666,
+    "std": 0.2922679700623659,
+    "min": 0.0,
+    "max": 1.0,
+    "median": 0.5,
+    "q25": 0.25,
+    "q75": 0.75,
+    "missing_pct": 0.0
+  },
+  "subscription_type": {
+    "unique_count": 3,
+    "mode": "Premium",
+    "distribution": {
+      "Premium": 0.3386,
+      "Basic": 0.3322,
+      "Standard": 0.3292
+    },
+    "missing_pct": 0.0
+  },
+  "region": {
+    "unique_count": 6,
+    "mode": "South America",
+    "distribution": {
+      "South America": 0.1746,
+      "Europe": 0.1734,
+      "North America": 0.1702,
+      "Asia": 0.1682,
+      "Africa": 0.1606,
+      "Oceania": 0.153
+    },
+    "missing_pct": 0.0
+  },
+  "device": {
+    "unique_count": 5,
+    "mode": "Tablet",
+    "distribution": {
+      "Tablet": 0.2096,
+      "Laptop": 0.2012,
+      "Mobile": 0.2008,
+      "TV": 0.1986,
+      "Desktop": 0.1898
+    },
+    "missing_pct": 0.0
+  },
+  "payment_method": {
+    "unique_count": 5,
+    "mode": "Debit Card",
+    "distribution": {
+      "Debit Card": 0.206,
+      "PayPal": 0.2052,
+      "Crypto": 0.199,
+      "Gift Card": 0.1952,
+      "Credit Card": 0.1946
+    },
+    "missing_pct": 0.0
+  },
+  "gender": {
+    "unique_count": 3,
+    "mode": "Female",
+    "distribution": {
+      "Female": 0.3422,
+      "Male": 0.3308,
+      "Other": 0.327
+    },
+    "missing_pct": 0.0
+  },
+  "favorite_genre": {
+    "unique_count": 7,
+    "mode": "Drama",
+    "distribution": {
+      "Drama": 0.1462,
+      "Documentary": 0.1458,
+      "Romance": 0.145,
+      "Sci-Fi": 0.144,
+      "Horror": 0.1426,
+      "Action": 0.1394,
+      "Comedy": 0.137
+    },
+    "missing_pct": 0.0
+  }
+}

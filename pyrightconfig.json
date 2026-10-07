@@ -1,0 +1,14 @@
+{
+  "include": [
+    "apps",
+    "ml",
+    "pipelines",
+    "tests",
+    "dags"
+  ],
+  "extraPaths": [
+    "."
+  ],
+  "pythonVersion": "3.10",
+  "typeCheckingMode": "basic"
+}

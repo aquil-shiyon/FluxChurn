@@ -1,0 +1,74 @@
+{
+  "models": {
+    "logistic_regression": {
+      "name": "Logistic Regression",
+      "pr_auc": 0.9641478855545446,
+      "roc_auc": 0.9607466230962992,
+      "brier_score": 0.07935928654641905,
+      "f1": 0.888671875,
+      "precision": 0.8974358974358975,
+      "recall": 0.8800773694390716,
+      "recall_at_10": 0.19342359767891681,
+      "precision_at_10": 1.0,
+      "lift_at_10": 1.9342359767891681
+    },
+    "random_forest": {
+      "name": "Random Forest",
+      "pr_auc": 0.9958983706087613,
+      "roc_auc": 0.9948340281365257,
+      "brier_score": 0.035214689451738695,
+      "f1": 0.975609756097561,
+      "precision": 0.984251968503937,
+      "recall": 0.9671179883945842,
+      "recall_at_10": 0.19342359767891681,
+      "precision_at_10": 1.0,
+      "lift_at_10": 1.9342359767891681
+    },
+    "xgboost": {
+      "name": "XGBoost",
+      "pr_auc": 0.9986614051179118,
+      "roc_auc": 0.9987625695303771,
+      "brier_score": 0.009216989390552044,
+      "f1": 0.989310009718173,
+      "precision": 0.994140625,
+      "recall": 0.9845261121856866,
+      "recall_at_10": 0.19342359767891681,
+      "precision_at_10": 1.0,
+      "lift_at_10": 1.9342359767891681
+    }
+  },
+  "selected": "xgboost",
+  "selection_rationale": {
+    "selected_model": "xgboost",
+    "selection_criteria": {
+      "primary_metric": "pr_auc",
+      "primary_value": 0.9986614051179118
+    },
+    "all_models": {
+      "logistic_regression": {
+        "pr_auc": 0.9641478855545446,
+        "roc_auc": 0.9607466230962992,
+        "brier_score": 0.07935928654641905,
+        "recall_at_10": 0.19342359767891681,
+        "precision_at_10": 1.0,
+        "calibration_slope": 0.9582398232043001
+      },
+      "random_forest": {
+        "pr_auc": 0.9958983706087613,
+        "roc_auc": 0.9948340281365257,
+        "brier_score": 0.035214689451738695,
+        "recall_at_10": 0.19342359767891681,
+        "precision_at_10": 1.0,
+        "calibration_slope": 1.3711054415986939
+      },
+      "xgboost": {
+        "pr_auc": 0.9986614051179118,
+        "roc_auc": 0.9987625695303771,
+        "brier_score": 0.009216989390552044,
+        "recall_at_10": 0.19342359767891681,
+        "precision_at_10": 1.0,
+        "calibration_slope": 1.115192799264172
+      }
+    }
+  }
+}

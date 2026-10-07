@@ -1,0 +1,81 @@
+# Feature configuration
+# Features listed here are derived from the actual dataset columns.
+# The source dataset (netflix_customer_churn_data.csv) is a flat snapshot
+# without event-level timestamps, so temporal features are adapted accordingly.
+
+feature_version: "1.0.0"
+
+# Raw columns from dataset that map to features
+raw_columns:
+  customer_id: "customer_id"
+  age: "age"
+  gender: "gender"
+  subscription_type: "subscription_type"
+  watch_hours: "watch_hours"
+  last_login_days: "last_login_days"
+  region: "region"
+  device: "device"
+  monthly_fee: "monthly_fee"
+  churned: "churned"
+  payment_method: "payment_method"
+  number_of_profiles: "number_of_profiles"
+  avg_watch_time_per_day: "avg_watch_time_per_day"
+  favorite_genre: "favorite_genre"
+
+# Numerical features used for model input
+numerical_features:
+  - age
+  - watch_hours
+  - last_login_days
+  - monthly_fee
+  - number_of_profiles
+  - avg_watch_time_per_day
+  # Derived features
+  - watch_hours_per_profile
+  - fee_per_watch_hour
+  - login_recency_score
+
+# Categorical features used for model input
+categorical_features:
+  - subscription_type
+  - region
+  - device
+  - payment_method
+  - gender
+  - favorite_genre
+
+# Features that are valid for simulation (mutable behavioral features)
+# Excludes demographic/identity features
+simulatable_features:
+  - watch_hours
+  - last_login_days
+  - avg_watch_time_per_day
+  - number_of_profiles
+  - subscription_type
+
+# Feature value ranges for simulation validation
+feature_ranges:
+  watch_hours:
+    min: 0.0
+    max: 120.0
+    type: continuous
+  last_login_days:
+    min: 0
+    max: 60
+    type: integer
+  avg_watch_time_per_day:
+    min: 0.0
+    max: 24.0
+    type: continuous
+  number_of_profiles:
+    min: 1
+    max: 5
+    type: integer
+  age:
+    min: 18
+    max: 70
+    type: integer
+  monthly_fee:
+    min: 8.99
+    max: 17.99
+    type: continuous

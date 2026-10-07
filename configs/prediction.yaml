@@ -1,0 +1,24 @@
+# Prediction configuration
+# All temporal windows and risk thresholds are defined here.
+# Do NOT hard-code these values elsewhere in the codebase.
+
+prediction:
+  # Number of days into the future the model predicts churn
+  prediction_horizon_days: 30
+
+  # Number of days of historical behavior used to generate features
+  observation_window_days: 60
+
+  # Risk band thresholds (probability boundaries)
+  # Bands: [0, low) → Low, [low, moderate) → Moderate, [moderate, high) → High, [high, 1.0] → Critical
+  risk_thresholds:
+    low: 0.3
+    moderate: 0.5
+    high: 0.7
+
+  # Minimum tenure days for a customer to be eligible for prediction
+  min_tenure_days: 7
+
+  # Model version to use for production predictions
+  # Updated when a new model is promoted
+  production_model_version: "1.0.0"
