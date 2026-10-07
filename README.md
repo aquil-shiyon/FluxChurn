@@ -146,9 +146,8 @@ npx pyright
 
 ---
 
-## 📄 Documentation Links
+## 📄 Documentation & License
 
-- [System Architecture](file:///c:/Users/princ/OneDrive/Documents/Aquil%20Projects/FlixChurn/architecture.md)
-- [UI/UX Design Specification](file:///c:/Users/princ/OneDrive/Documents/Aquil%20Projects/FlixChurn/design.md)
-- [Product Requirements Document (PRD)](file:///c:/Users/princ/OneDrive/Documents/Aquil%20Projects/FlixChurn/prd.md)
-- [Project Memory & State Report](file:///c:/Users/princ/OneDrive/Documents/Aquil%20Projects/FlixChurn/memory.md)
+- [Project Memory & Architecture Report](memory.md) — Consolidated Single Source of Truth (SSOT), ML benchmarks, and system specs.
+- [MIT License](LICENSE) — Open source licensing terms.
+
