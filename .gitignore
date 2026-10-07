@@ -74,3 +74,10 @@ mlruns/
 *~
 .DS_Store
 Thumbs.db
+
+# Local specifications & internal planning files (ignored from git)
+architecture.md
+design.md
+prd.md
+rules.md
+
